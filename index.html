@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script async src="https://cdn.jsdelivr.net/npm/tsparticles-confetti@2.12.0/tsparticles.confetti.bundle.min.js"></script>
+  <script async src="script.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <title>form gamificado</title>
+</head>
+
+<body>
+  <section id="section_hello" class="section_hello">
+    <p id="greetingText" style="font-size: 38px; font-weight: 400;"> </p>
+  </section>
+  <main id="container">
+    <section id="img">
+      <img src="assets/index.svg">
+    </section>
+    <form id="form" onsubmit="event.preventDefault()">
+      <div class="form-section">
+        <header>informações pessoais</header>
+
+        <label for="nome">primeiro nome:</label>
+        <input type="text" placeholder="primeiro nome" id="nome" autocomplete="off"/>
+        <label class="alert" id="nome" style="display: none;"></label>
+
+        <label for="sobrenome">sobrenome:</label>
+        <input type="text" placeholder="seu sobrenome" id="sobrenome" autocomplete="off"/>
+        <label class="alert" id="sobrenome" style="display: none;"></label>
+
+        <label for="email">email:</label>
+        <input type="email" placeholder="exemplo@gmail.com" id="email" autocomplete="off"/>
+        <label class="alert" id="email" style="display: none;"></label>
+
+        <label for="data_nascimento">data de nascimento:</label>
+        <input type="text" placeholder="dd/mm/aaaa" id="data_nascimento" autocomplete="off"/>
+        <label class="alert" id="data_nascimento" style="display: none;"></label>
+      </div>
+      <div class="form-section" style="display: none">
+        <header>informações de contato</header>
+
+        <label for="numero">numero:</label>
+        <input type="text" placeholder="seu telefone" id="numero" autocomplete="off"/>
+        <label class="alert" id="numero" style="display: none;"></label>
+
+        <label for="endereco">endereço completo:</label>
+        <input type="text" placeholder="endereço completo" id="endereco" autocomplete="off"/>
+        <label class="alert" id="endereco" style="display: none;"></label>
+
+        <label for="complemento">complemento: (opcional)</label>
+        <input type="text" placeholder="perto de onde você mora ?" id="complemento" autocomplete="off"/>
+        <label class="alert" id="complemento" style="display: none;"></label>
+
+        <label for="codigo_postal">codigo postal:</label>
+        <input type="text" placeholder="cep da cidade... ex: 8687-0000" id="codigo_postal" autocomplete="off"/>
+        <label class="alert" id="codigo_postal" style="display: none;"></label>
+      </div>
+
+      <div class="form-section" style="display: none">
+        <header>informações adicionais</header>
+
+        <label for="cpf">cpf:</label>
+        <input type="text" placeholder="cadastro de pessoa fisica... 000.000.000-00" id="cpf" autocomplete="off"/>
+        <label class="alert" id="cpf" style="display: none;"></label>
+
+        <label for="senha">senha:</label>
+        <input type="password" placeholder="Escolha uma senha... ao menos 8 caracteres" id="senha" autocomplete="off"/>
+        <label class="alert" id="senha" style="display: none;"></label>
+
+        <label for="comentarios">comentarios ou observações adicionais: (opcional)</label>
+        <input style="height: 150px;" id="comentarios"
+          placeholder="Algum comentario, critica, elegio ou sugestão ? (opcional)" autocomplete="off"/>
+        <label class="alert" id="comentarios" style="display: none;"></label>
+      </div>
+
+      <div id="btn_prosseguir" class="button_progress">
+        <div id="progress_bar" class="progress10 progress_bar"></div>
+        <span class="button_text">Próximo</span>
+      </div>
+    </form>
+    <div style="display: none;" id="canvas">
+    </div>
+  </main>
+</body>
+
+</html>
